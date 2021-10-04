@@ -5,19 +5,34 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { FundamentalNgxPlatformModule } from '@fundamental-ngx/platform'
-import { FundamentalNgxCoreModule } from '@fundamental-ngx/core'
 
+import { HttpClientModule } from  '@angular/common/http';
+import { ListComponent } from './components/list/list.component';
+import { CustomdatePipe } from './pipes/customdate.pipe';
+import { ExecutionPipe } from './pipes/execution.pipe';
+import { ExecutionBGPipe } from './pipes/execution-bg.pipe';
+import { DetailComponent } from './components/detail/detail.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes :Routes = [
+  { path: '' , component: ListComponent },
+  { path: 'detail' , component: DetailComponent }
+]
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListComponent,
+    CustomdatePipe,
+    ExecutionPipe,
+    ExecutionBGPipe,
+    DetailComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FundamentalNgxPlatformModule,
-    FundamentalNgxCoreModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

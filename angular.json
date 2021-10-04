@@ -31,8 +31,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/fundamental-styles/dist/icon.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
