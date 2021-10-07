@@ -1,0 +1,16 @@
+{
+    "welcomeFile": "index.html",
+    "authenticationMethod": "route",
+    "routes": [				
+      {
+        "source": "^/odata/driver/(.*)$",
+        "target" : "/sap/opu/odata/sap/ZTMDRIROOT_C_CDS/$1",
+        "destination": "tm_https",
+        "csrfProtection": false
+      },
+      {
+        "source": "/*",
+        "localDir": "./"
+      }
+    ]
+  }

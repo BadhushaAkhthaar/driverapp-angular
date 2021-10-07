@@ -8,16 +8,16 @@ export class ExecutionBGPipe implements PipeTransform {
     var status : string;
     switch (value) {
       case '03':
-        status = 'informative';
+        status = 'badge bg-success h-100';
         break;
       case '04':
-        status = 'positive';
+        status = 'badge bg-danger h-100';
         break;
       case '07':
-        status = 'negative';
+        status = 'badge bg-warning h-100';
         break;
       default:
-        status = "critical"
+        status = 'badge bg-secondary h-100';
         break;
     }
     return status;

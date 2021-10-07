@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,7 +16,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes :Routes = [
   { path: '' , component: ListComponent },
-  { path: 'detail' , component: DetailComponent }
+  { path: 'freightorder/detail/:foid' , component: DetailComponent }
 ]
 @NgModule({
   declarations: [
@@ -35,6 +35,9 @@ const appRoutes :Routes = [
     HttpClientModule,
   ],
   providers: [],
+  schemas:[
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

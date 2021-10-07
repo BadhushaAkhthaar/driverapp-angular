@@ -1,33 +1,18 @@
-<div>
-    <nav class="bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-              <div class="flex items-center">
-                <div class="flex-shrink">
-                  <img class="w-16" src="https://novigo.com/assets/images/NOVIGO-Logo-header.png" alt="Workflow">
-                </div>
-                <div class="md:block">
-                  <div class="ml-10 flex space-x-2">
-                    <div class="text-white px-3 py-2 text-lg font-medium" aria-current="page">Driver App</div>
-                  </div>
-                </div>
-              </div>
-              <div class="md:block">
-                <div class="ml-4 flex items-center md:ml-6">
-                  <button type="button" class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-        </div>
-    </nav>
-    <!-- <app-list></app-list> -->
-    <router-outlet></router-outlet>
-</div>
-
-  
-
-  
+<nav class="navbar bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white">Driver App</a>
+    <div class="d-flex">
+      <button class="btn btn-success float-end d-inline-flex flex-row align-items-center w-auto" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat"
+          viewBox="0 0 16 16">
+          <path
+            d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+          <path fill-rule="evenodd"
+            d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
+        </svg>
+        <div class="ps-2">Sync</div>
+      </button>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

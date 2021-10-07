@@ -8,6 +8,10 @@ export class MainserviceService {
   constructor(private http: HttpClient) { }
 
   getFreightOrders(){
-    return this.http.get("/odata/driver");
+    return this.http.get("/odata/driver/ZTMDRIROOT_C/");
+  }
+
+  getFreightOrderUsingId(tor_id: String){
+    return this.http.get(`/odata/driver/ZTMDRIROOT_C('${tor_id}')`)
   }
 }
