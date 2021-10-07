@@ -10,6 +10,7 @@ import { MainserviceService } from '../../services/mainservice.service';
 export class DetailComponent implements OnInit {
   _foid: any;
   _fo: any;
+  _fo_Stop: any;
   _dataFetched: boolean = false;
   constructor(private route: ActivatedRoute,private service: MainserviceService) {}
 
@@ -20,6 +21,10 @@ export class DetailComponent implements OnInit {
       console.log(data)
       this._fo = data.d;
       console.log(this._fo)
+    })
+    this.service.getStopsofFO(this._foid).subscribe((data: any)=>{
+      this._fo_Stop = data.d.results;
+      console.log(this._fo_Stop)
     })
   }
 

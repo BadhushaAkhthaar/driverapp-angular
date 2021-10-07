@@ -14,4 +14,8 @@ export class MainserviceService {
   getFreightOrderUsingId(tor_id: String){
     return this.http.get(`/odata/driver/ZTMDRIROOT_C('${tor_id}')`)
   }
+
+  getStopsofFO(tor_id: String){
+    return this.http.get(`/odata/driver/ZTMDRIROOT_C('${tor_id}')/to_stop`)
+  }
 }

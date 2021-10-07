@@ -1,4 +1,4 @@
-<div class="list-group list-group-flush">
+<!-- <div class="list-group list-group-flush">
   <a class="list-group-item list-group-item-action" *ngFor="let _fo of _freightOrders" (click)="toggleCheck(_fo)">
     <span class="pt-1 form-checked-content">
       <div class="d-flex w-100 justify-content-between">
@@ -21,4 +21,7 @@
       
     </span>
   </a>
-</div>
+</div> -->
+<ui5-list id="myList" class="full-width">
+  <ui5-li icon="navigation-right-arrow" *ngFor="let _fo of _freightOrders" (click)="toggleCheck(_fo)" [description]="_fo.pickup_dt | customdate" image="https://www.pinclipart.com/picdir/middle/578-5782877_royalty-free-vector-graphics-stock-photography-truck-vector.png" icon-end>{{_fo.tor_id}}</ui5-li>
+</ui5-list>

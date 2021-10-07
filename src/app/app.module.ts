@@ -14,6 +14,12 @@ import { ExecutionBGPipe } from './pipes/execution-bg.pipe';
 import { DetailComponent } from './components/detail/detail.component';
 import { RouterModule, Routes } from '@angular/router';
 
+
+import '@ui5/webcomponents-fiori/dist/ShellBar';
+import '@ui5/webcomponents/dist/List';
+import '@ui5/webcomponents-icons/dist/AllIcons.js';
+import "@ui5/webcomponents/dist/Title";
+import '@ui5/webcomponents/dist/Breadcrumbs'
 const appRoutes :Routes = [
   { path: '' , component: ListComponent },
   { path: 'freightorder/detail/:foid' , component: DetailComponent }
